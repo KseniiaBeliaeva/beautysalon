@@ -11,7 +11,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 module.exports = {
     entry: {
-        index: './src/index.jsx',
+        index: './src/index.jsx', 
     },
     output: {
         filename: '[name].js',
