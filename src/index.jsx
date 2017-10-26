@@ -26,7 +26,10 @@ class Promotions extends React.Component {
 class Footer extends React.Component { 
     render() { 
         return (
-            <button className="top-navigation bottomButton"><i className="material-icons">arrow_upward</i></button>
+            <button className="bottomButton">
+                <a href="#top"><i className="material-icons">arrow_upward</i>
+                </a>    
+            </button>
         );
     }
 }
@@ -36,9 +39,11 @@ class Body extends React.Component {
             <div>
               <Header name={this.props.main.companyName} />
               <Menu />
-              {this.props.main.promo.map(special =>
+              <div className="promotions__main-wrapper">
+                  {this.props.main.promo.map(special =>
                     <Promotions promotion={special} key={special.promoName} />
-                )}
+                    )}
+                </div>    
                 <Footer />
             </div>    
         )

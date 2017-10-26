@@ -13,6 +13,7 @@ module.exports = {
     entry: {
         index: './src/index.jsx',
         menu: './src/Menu.jsx',
+        services: './src/Services.jsx',
     },
     output: {
         filename: '[name].js',
