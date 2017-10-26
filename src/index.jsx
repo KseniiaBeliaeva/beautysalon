@@ -22,6 +22,14 @@ class Promotions extends React.Component {
         );
     }
 }
+
+class Footer extends React.Component { 
+    render() { 
+        return (
+            <button className="top-navigation bottomButton"><i className="material-icons">arrow_upward</i></button>
+        );
+    }
+}
 class Body extends React.Component {
     render() {
         return (
@@ -30,7 +38,8 @@ class Body extends React.Component {
               <Menu />
               {this.props.main.promo.map(special =>
                     <Promotions promotion={special} key={special.promoName} />
-                )}  
+                )}
+                <Footer />
             </div>    
         )
     };

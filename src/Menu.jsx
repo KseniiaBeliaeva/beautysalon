@@ -28,17 +28,20 @@ let topMenuList = [
 export default class Menu extends React.Component {
     render() {
         let topMenuSection = topMenuList.map(menuItem =>
-            <li key={menuItem.name} className="topMenuItem">
-                <a href={menuItem.link} className="topMenuLink">
+                <li key={menuItem.name} className="topMenuItem">
+                <form method="get" action={menuItem.link}>
+                    <button className="topMenuLink">
                     {menuItem.name}
-                </a>
-            </li>);
+                    </button>
+                </form>    
+                </li>
+        );
         return (
             <div>
+                <button className="top-navigation"><i className="material-icons">menu</i></button>
             <ul className="topMenu">
                 {topMenuSection}
             </ul>
-            <button className="top-navigation"><i className="material-icons">menu</i></button>
             </div>    
         );
     }
