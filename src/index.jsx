@@ -1,15 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Menu from './Menu.jsx';
+import Menu from './menu.jsx';
+import Header from './header';
 
 
-class Header extends React.Component {
-    render() {
-        return (
-            <h1 className="header">{this.props.name}</h1>
-        )
-    };
-}
 class Promotions extends React.Component { 
     render() { 
         let specialPromo = this.props.promotion;

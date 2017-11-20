@@ -12,17 +12,23 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 module.exports = {
     entry: {
         index: './src/index.jsx',
-        menu: './src/Menu.jsx',
-        services: './src/Services.jsx',
+        menu: './src/menu.jsx',
+        services: './src/services.jsx',
+        header: './src/header.jsx',
+        specials: './src/specials.tsx',
     },
     output: {
         filename: '[name].js',
         path: __dirname + "/dist",
     },
+    resolve: {
+        extensions: [".ts", ".tsx", ".js", ".jsx", ".json"]
+    },
     module: {
         rules: [
             // rules for modules (configure loaders, parser options, etc.)
-
+            { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+            { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
             {
                 test: /\.jsx?$/,
                 loader: "babel-loader",
@@ -34,5 +40,6 @@ module.exports = {
         //  loaders: { test: /\.css$/, loader: "style-loader!css-loader" },
     },
     plugins: [HtmlWebpackPluginConfig],
+    devtool: '#source-map',
 };
 
