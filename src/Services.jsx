@@ -14,9 +14,7 @@ class Hello extends React.Component {
             <div>
             <Header/>
             <Menu />
-            <div className="services">    
-                    <img src={this.props.main.img} className="logo" />
-            </div>        
+                    <img src={this.props.main.img} className="logo" />      
             <Specials />
             </div>
         );

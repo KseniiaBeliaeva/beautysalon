@@ -15,11 +15,11 @@ module.exports = {
         menu: './src/menu.jsx',
         services: './src/services.jsx',
         header: './src/header.jsx',
-        specials: './src/specials.tsx',
+        specials: './src/specials.jsx',
     },
     output: {
         filename: '[name].js',
-        path: __dirname + "/dist",
+        path: __dirname + "/docs",
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".jsx", ".json"]
