@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './components/header.css';
 
 let companyName = {
     name: 'Maria beauty studio',

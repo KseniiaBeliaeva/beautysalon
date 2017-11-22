@@ -1,0 +1,13 @@
+
+.bottomButton {
+    display: block;
+}
+.bottomButton {
+    float: right;
+}
+
+@media screen and (min-width:481px) and (max-width: 680px) {
+#root {
+padding: 15px;
+}
+}

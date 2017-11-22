@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Menu from './menu.jsx';
-import Header from './header.jsx';
-import Promotions from './promotions.jsx';
-import Footer from './footer.jsx';
+import Menu from './components/menu/menu.jsx';
+import Header from './components/header/header.jsx';
+import Promotions from './components/promotions/promotions.jsx';
+import Footer from './components/footer/footer.jsx';
 
 class Body extends React.Component {
     render() {

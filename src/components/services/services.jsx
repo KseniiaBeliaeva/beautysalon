@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Menu from './menu';
-import Header from './header';
-import Specials from './specials';
-
-
-//РАБТТ ЭТА СТРН
-
+import Menu from './components/menu/menu.jsx';
+import Header from './components/header/header.jsx';
+import Promotions from './components/promotions/promotions.jsx';
+import Footer from './components/footer/footer.jsx';
+import Specials from './components/specials.jsx';
+import './components/services.css';
 
 class Hello extends React.Component {
     render() {
@@ -14,7 +13,7 @@ class Hello extends React.Component {
             <div>
             <Header/>
             <Menu />
-                    <img src={this.props.main.img} className="logo" />      
+             <img src={this.props.main.img} className="logo" />      
             <Specials />
             </div>
         );
