@@ -1,0 +1,29 @@
+html,
+body {
+    margin: 0 15px;   
+}
+html {
+        background-color: rgba(230, 230, 250, 0.2);
+}
+body {
+    background-color: white;
+}
+#root {
+    box-shadow: 0px 0px 18px 0px rgb(0, 8, 12);
+}
+
+.bottomButton {
+    display: block;
+}
+.bottomButton {
+    float: right;
+}
+.logo {
+    width: 100%;
+}
+
+@media screen and (min-width:481px) and (max-width: 680px) {
+#root {
+padding: 15px;
+}
+}

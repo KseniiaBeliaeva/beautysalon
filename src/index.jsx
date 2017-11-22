@@ -1,49 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Menu from './menu.jsx';
-import Header from './header';
+import Header from './header.jsx';
+import Promotions from './promotions.jsx';
+import Footer from './footer.jsx';
 
-
-class Promotions extends React.Component { 
-    render() { 
-        let specialPromo = this.props.promotion;
-        return (
-            <div className="promo__wrapper">
-                <h5 className="promo__header">{specialPromo.promoName}</h5>
-                <img className="promo__img" src={specialPromo.img} alt={specialPromo.hiddenText} />
-                <p className="promo__text">{specialPromo.promoText}</p>
-             </div>   
-        );
-    }
-}
-
-class Footer extends React.Component { 
-    render() { 
-        return (
-            <button className="bottomButton">
-                <a href="#top"><i className="material-icons">arrow_upward</i>
-                </a>    
-            </button>
-        );
-    }
-}
 class Body extends React.Component {
     render() {
         return (
             <div>
-              <Header name={this.props.main.companyName} />
-              <Menu />
-              <div className="promotions__main-wrapper">
-                  {this.props.main.promo.map(special =>
-                    <Promotions promotion={special} key={special.promoName} />
+                <Header name={this.props.main.companyName} />
+                <Menu />
+                <div className="promotions__main-wrapper">
+                    {this.props.main.promo.map(special =>
+                        <Promotions promotion={special} key={special.promoName} />
                     )}
-                </div>    
+                </div>
                 <Footer />
-            </div>    
+            </div>
         )
     };
 }
-
 let main = {
     companyName: "Maria beauty studio",
     promo:

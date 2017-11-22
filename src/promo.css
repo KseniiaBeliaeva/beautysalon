@@ -1,0 +1,28 @@
+.promo__header {
+    text-align: center;
+}
+@media screen and (max-width: 480px) {
+.promo__wrapper {
+    clear: both;
+    margin: 0 15px;
+}
+.promo__header {
+    font-size: 15px;
+}
+.promo__img {
+    width:100%;
+}
+}
+@media screen and (min-width:481px) and (max-width: 680px) {
+#root {
+padding: 15px;
+}
+
+.promotions__main-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.promo__img {
+    width: 100%;
+}
+}
